@@ -6,7 +6,7 @@ from Models.RatingModel import Rating
 from Config import get_db
 from Schemas.rating import OrderRatingCreate
 
-router = APIRouter(prefix="/ratings", tags=["Ratings"])
+router = APIRouter()
 
 @router.post("/order")
 def rate_order(data: OrderRatingCreate, db: Session = Depends(get_db)):
